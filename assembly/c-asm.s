@@ -11,19 +11,11 @@ james:
 	addi	sp,sp,-32
 	sw	s0,28(sp)
 	addi	s0,sp,32
-	li	a5,11
-	sw	a5,-24(s0)
-	li	a5,2
-	sw	a5,-20(s0)
-	j	.L2
-.L3:
-	lw	a5,-20(s0)
-	addi	a5,a5,200
-	sw	a5,-20(s0)
-.L2:
-	lw	a4,-24(s0)
-	li	a5,10
-	beq	a4,a5,.L3
+	li	a5,16384
+	addi	a5,a5,330
+	sh	a5,-20(s0)
+	li	a5,77
+	sb	a5,-18(s0)
 	nop
 	lw	s0,28(sp)
 	addi	sp,sp,32
